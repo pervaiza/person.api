@@ -1,3 +1,4 @@
+using Azure.Identity;
 using Azure.Storage.Queues;
 using eintech.api.Models;
 using eintech.api.Repositories;
@@ -49,7 +50,19 @@ namespace eintech.api
                  {
                      var queueConnection = Configuration.GetConnectionString("QueuePersonDbConnection");
                      var queueName = Configuration.GetConnectionString("QueueName");
+
                      return new QueueClient(queueConnection, queueName);
+
+                     //add values through azure manged identity 
+                     /*
+                     var userRoleAssignedId = Configuration.GetConnectionString("ManagedIdentityClientId");
+                     var queueUri = Configuration.GetConnectionString("QueueUri");
+                     var credentials = new DefaultAzureCredential(new DefaultAzureCredentialOptions()
+                     {
+                         ManagedIdentityClientId = userRoleAssignedId
+                     });
+                     return new QueueClient(new Uri(queueUri), credentials);
+                     */
                  });
             });
         }
