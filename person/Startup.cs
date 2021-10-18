@@ -65,6 +65,7 @@ namespace eintech.api
                      return new QueueClient(new Uri(queueUri), credentials);
                      */
                  });
+
             });
         }
 
