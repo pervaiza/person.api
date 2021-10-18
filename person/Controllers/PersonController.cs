@@ -58,7 +58,7 @@ namespace eintech.api.Controllers
                 return BadRequest();
 
             await _updateService.Create(person);
-            await _queueClient.SendMessageAsync(JsonSerializer.Serialize(person),null,TimeSpan.FromSeconds(100));
+            await _queueClient.SendMessageAsync(JsonSerializer.Serialize(person),null,TimeSpan.FromMinutes(10));
             
             return Ok(person);
         }

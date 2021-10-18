@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eintech.api", "eintech.api.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eintech.domain", "..\eintech.domain\eintech.domain.csproj", "{6F480232-64BD-4CBA-96A2-C8C2B93AC7DB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serverless-MiddleTier", "Serverless-MiddleTier", "{C0BA4FAD-D027-49AA-A140-C51A262E30FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonIngest-From-Queue", "..\PersonIngest-From-Queue\PersonIngest-From-Queue.csproj", "{4A12AAEB-0CFE-43AC-A1D9-D727355D4928}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,9 +25,16 @@ Global
 		{6F480232-64BD-4CBA-96A2-C8C2B93AC7DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F480232-64BD-4CBA-96A2-C8C2B93AC7DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F480232-64BD-4CBA-96A2-C8C2B93AC7DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A12AAEB-0CFE-43AC-A1D9-D727355D4928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A12AAEB-0CFE-43AC-A1D9-D727355D4928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A12AAEB-0CFE-43AC-A1D9-D727355D4928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A12AAEB-0CFE-43AC-A1D9-D727355D4928}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A12AAEB-0CFE-43AC-A1D9-D727355D4928} = {C0BA4FAD-D027-49AA-A140-C51A262E30FB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C22E3348-74D1-427D-8986-F0C61B4934A3}

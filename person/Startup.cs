@@ -51,7 +51,8 @@ namespace eintech.api
                      var queueConnection = Configuration.GetConnectionString("QueuePersonDbConnection");
                      var queueName = Configuration.GetConnectionString("QueueName");
 
-                     return new QueueClient(queueConnection, queueName);
+                     options.MessageEncoding = QueueMessageEncoding.Base64;
+                     return new QueueClient(queueConnection, queueName, options);
 
                      //add values through azure manged identity 
                      /*
